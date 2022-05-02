@@ -1,0 +1,151 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-image: url("./img/1980.png");
+    background-image: url("./img/kbe.gif");
+    background-color: #000000;
+	  font-family: monospace;
+}
+
+div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+div span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+	  position: absolute;
+	  top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 1s ease-in-out;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width:400px;
+  height:400px;
+  background-color: black;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  border-color: #FE75F0;
+}
+
+
+a.glow, a.glow:hover, a.glow:focus
+{
+    text-decoration: none;
+    color: #FE75F0;
+    text-shadow: none;
+    transition: 150ms linear 0s;
+    outline: 0 none;
+}
+
+a.glow:hover, a.glow:focus
+{
+    color: #FE75F0;
+    text-shadow: -1px 1px 8px #ffc, 1px -1px 8px #FE75F0;
+}
+
+a:link {
+  color: #FE75F0;
+}
+
+/* visited link */
+a:visited {
+  color: #FE75F0;
+}
+
+/* mouse over link */
+a:hover {
+  color: #FE75F0;
+}
+
+/* selected link */
+a:active {
+  color: #FE75F0;
+}
+
+input:checked ~ .modal-overlay {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+#con {
+  margin: 8px;
+  display: inline-block;
+  color: #FE75F0;
+}
+
+.welcome h3 {
+  color:#FE75F0;
+  margin-left: 8px;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+
+.welcome h3::after {
+    /*code commented for brevity*/
+    color:#FE75F0;
+    animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+.welcome h3::after {
+  content: "";
+  width: 5px;
+  height: 20px;
+  background: #FE75F0;
+  display: inline-block;
+  animation: cursor-blink 1.5s steps(2) infinite;
+}
+
+ul {
+  list-style: none; /* Remove default bullets */
+  margin-top:0px;
+  margin-left:-10px;
+}
+
+ul li::before {
+  content: "\2023";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: #FE75F0; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
